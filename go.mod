@@ -1,4 +1,4 @@
-module github.com/easeq/go-consul-registry
+module github.com/easeq/go-consul-registry/v2
 
 go 1.15
 

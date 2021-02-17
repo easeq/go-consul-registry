@@ -10,7 +10,7 @@ import (
 	consul "github.com/hashicorp/consul/api"
 	"google.golang.org/grpc/resolver"
 
-	"github.com/easeq/go-consul-registry/internal/mocks"
+	"github.com/easeq/go-consul-registry/v2/internal/mocks"
 )
 
 func replaceCreateHealthClientFn(fn func(cfg *consul.Config) (consulHealthEndpoint, error)) func() {

@@ -35,7 +35,7 @@ import (
   "google.golang.org/grpc"
   "google.golang.org/grpc/resolver"
 
-  "github.com/easeq/go-consul-registry/consul"
+  "github.com/easeq/go-consul-registry/v2/consul"
 )
 
 func main() {
@@ -62,7 +62,7 @@ package main
 import (
   "context"
   "google.golang.org/grpc"
-  "github.com/easeq/go-consul-registry/consul"
+  "github.com/easeq/go-consul-registry/v2/consul"
 )
 
 func main() {
