@@ -38,11 +38,6 @@ import (
   "github.com/easeq/go-consul-registry/consul"
 )
 
-func init() {
-  // Register the consul consul at the grpc-go library
-  resolver.Register(consul.NewBuilder())
-}
-
 func main() {
   // Create a GRPC-Client connection with the default load-balancer.
   // The addresses of the service "user-service" with the tags

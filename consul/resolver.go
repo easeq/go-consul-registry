@@ -248,3 +248,7 @@ func (c *consulResolver) Close() {
 	c.cancel()
 	c.wgStop.Wait()
 }
+
+func init() {
+	resolver.Register(NewBuilder())
+}
