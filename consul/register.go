@@ -19,7 +19,7 @@ import (
 // port - service port
 // target - consul dial address, for example: "127.0.0.1:8500"
 // ttl - ttl of the register information
-func Register(ctx context.Context, name string, host string, port int, target string, ttl int) error {
+func Register(ctx context.Context, name string, host string, port int, target string, ttl int, tags ...string) error {
 	if ctx == nil {
 		panic("nil context")
 	}
@@ -37,6 +37,7 @@ func Register(ctx context.Context, name string, host string, port int, target st
 		Name:    name,
 		Port:    port,
 		Address: host,
+		Tags:    tags,
 		Check: &api.AgentServiceCheck{
 			CheckID:                        serviceID,
 			TTL:                            fmt.Sprintf("%ds", ttl),
