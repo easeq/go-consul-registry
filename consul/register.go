@@ -27,7 +27,7 @@ func Register(ctx context.Context, name string, host string, port int, target st
 	conf := &api.Config{Scheme: "http", Address: target}
 	client, err := api.NewClient(conf)
 	if err != nil {
-		return fmt.Errorf("Create consul client error: %v", err)
+		return fmt.Errorf("create consul client error: %v", err)
 	}
 
 	// service definition
@@ -49,7 +49,7 @@ func Register(ctx context.Context, name string, host string, port int, target st
 	// register service
 	err = client.Agent().ServiceRegister(reg)
 	if err != nil {
-		return fmt.Errorf("Consul service register error: %v", err)
+		return fmt.Errorf("consul service register error: %v", err)
 	}
 
 	// ttl ticker
